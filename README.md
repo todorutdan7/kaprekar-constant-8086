@@ -1,19 +1,20 @@
 # Kaprekar's Constant in 8086 Assembly
 
-This repository contains an implementation of [Kaprekar's Constant](https://en.wikipedia.org/wiki/6174_(number)) (6174) written in 8086 asm. 
+This repository contains an implementation of [Kaprekar's Constant](https://en.wikipedia.org/wiki/6174_(number)) (6174) written 8086 asm. 
 
-Kaprekar's routine is an algorithm that involves taking any 4 digit number (where not all digits are the same), sorting the digits in descending and ascending order, and subtracting the smaller number from the larger one. When repeated, this process always outputs the number **6174**.
+## Features
+The program includes a text based menu offering two modes:
+* **Interactive Mode (i):** The user inputs a 4 digit number, and the program calculates the number of iterations required to reach 6174 (or 0000).
+* **Automatic Mode (a):** The program automatically generates a file named `kaprekar.txt` and calculates the required iterations for *all* valid 4 digit numbers.
 
 ## Prerequisites
-To run this code, you will need an 8086 emulator or assembler such as:
+To compile and run this code, you will need:
+* [DOSBox](https://www.dosbox.com/)
+* An assembler and linker (e.g., MASM/LINK or TASM/TLINK)
 
-* [DOSBox](https://www.dosbox.com/) with MASM or TASM installed
-
-## How to run
-1. Open your emulator
-2. Load the `kaprekar.asm` file.
-3. Assemble and run the program.
-
-## Built With
-* Notepad++
-* 8086 Assembly Language
+## How to Run in DOSBox
+1. Place `kaprekar.asm` and your assembler/linker executables in a local folder (e.g., `C:\8086`).
+2. Open DOSBox and mount the directory:
+   ```text
+   mount c c:\8086
+   c:
